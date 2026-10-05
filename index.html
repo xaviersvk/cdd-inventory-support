@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CDD Inventory Support</title>
+<meta name="description" content="Support, bug reports and contact for the CDD Inventory app for iOS and Android.">
+<style>
+  :root {
+    --bg: #f7f8fa; --surface: #ffffff; --text: #16191d; --muted: #5b6470;
+    --border: #e2e6eb; --accent: #1a6fd1; --accent-text: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101317; --surface: #181c22; --text: #e8ebef; --muted: #9aa4b1;
+      --border: #2a3039; --accent: #5aa2f0; --accent-text: #0b1420;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.25rem; margin: 40px 0 12px; }
+  h3 { font-size: 1rem; margin: 0 0 4px; }
+  p { margin: 0 0 12px; }
+  .lead { color: var(--muted); font-size: 1.1rem; }
+  a { color: var(--accent); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .card {
+    display: block; padding: 16px; border: 1px solid var(--border); border-radius: 12px;
+    background: var(--surface); color: var(--text); text-decoration: none;
+  }
+  .card:hover, .card:focus-visible { border-color: var(--accent); }
+  .card p { color: var(--muted); font-size: .95rem; margin: 0; }
+  .note {
+    padding: 12px 16px; border-left: 3px solid var(--accent); background: var(--surface);
+    border-radius: 0 8px 8px 0; font-size: .95rem;
+  }
+  details { border-bottom: 1px solid var(--border); padding: 12px 0; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { margin: 8px 0 0; color: var(--muted); }
+  footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>CDD Inventory Support</h1>
+  <p class="lead">Help for the CDD Inventory app for iPhone, iPad and Android: a scanner-first,
+    offline companion for checking physical samples against CDD Vault.</p>
+
+  <h2>Get help</h2>
+  <div class="cards">
+    <a class="card" href="https://github.com/xaviersvk/cdd-inventory-support/issues/new?template=bug_report.yml">
+      <h3>Report a problem</h3>
+      <p>Something does not work or shows an error.</p>
+    </a>
+    <a class="card" href="https://github.com/xaviersvk/cdd-inventory-support/issues/new?template=feature_request.yml">
+      <h3>Suggest a feature</h3>
+      <p>An idea that would make inventory work faster.</p>
+    </a>
+    <a class="card" href="https://github.com/xaviersvk/cdd-inventory-support/issues/new?template=question.yml">
+      <h3>Ask a question</h3>
+      <p>Setup, sync, scanning or anything else.</p>
+    </a>
+  </div>
+  <p style="margin-top:12px"><a href="https://github.com/xaviersvk/cdd-inventory-support/issues">See all open and resolved tickets</a>
+    (a free GitHub account is needed to open one).</p>
+  <p class="note"><strong>Tickets are public.</strong> Never include API tokens, vault IDs, sample data or
+    screenshots with confidential information. For anything confidential, use e-mail.</p>
+
+  <h2>Contact</h2>
+  <p>Developer: Matúš Drexler<br>
+    E-mail: <a href="mailto:matusdrexler@gmail.com">matusdrexler@gmail.com</a></p>
+
+  <h2>Frequently asked questions</h2>
+  <details>
+    <summary>What do I need to use the app?</summary>
+    <p>A CDD Vault account and an API token for your vault. You add the vault in the app (EU or US
+      server), and the app syncs its inventory to your phone.</p>
+  </details>
+  <details>
+    <summary>Why can't I deplete, move or edit samples?</summary>
+    <p>Every vault is read-only by default. Writes are enabled only when you mark the vault's token as
+      read/write in the vault settings, and the token itself must have write permission in CDD Vault.</p>
+  </details>
+  <details>
+    <summary>A sample is missing or out of date in the app.</summary>
+    <p>Run a sync. The app shows only what was synced from CDD Vault; changes made in CDD after the
+      last sync appear after the next one.</p>
+  </details>
+  <details>
+    <summary>Does the app work without a signal?</summary>
+    <p>Yes. Browsing, searching and checking sessions work offline from the synced data. Writes to
+      CDD Vault and syncing need a connection.</p>
+  </details>
+  <details>
+    <summary>Where is my API token stored?</summary>
+    <p>Only on your device, encrypted by the system (Keychain on iOS, Keystore on Android). It is sent
+      only to the CDD Vault server you configured. See the
+      <a href="https://xaviersvk.github.io/cdd-inventory-privacy/">privacy policy</a>.</p>
+  </details>
+  <details>
+    <summary>Is this an official CDD Vault app?</summary>
+    <p>No. CDD Inventory is an independent app and is not affiliated with Collaborative Drug
+      Discovery, Inc.</p>
+  </details>
+
+  <footer>
+    <a href="https://xaviersvk.github.io/cdd-inventory-privacy/">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>

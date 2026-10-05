@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private or confidential matter (e-mail)
+    url: mailto:matusdrexler@gmail.com
+    about: Anything involving vault data, API tokens or company details — please e-mail instead of opening a public issue.
+  - name: Privacy policy
+    url: https://xaviersvk.github.io/cdd-inventory-privacy/
+    about: How the app handles your data.

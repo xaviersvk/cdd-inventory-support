@@ -1,0 +1,77 @@
+name: Bug report
+description: Something in the app does not work as expected.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! **Issues are public.** Never paste API tokens, vault IDs, sample data or screenshots that show confidential information.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - iOS (iPhone / iPad)
+        - Android
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version
+      description: "iOS: Settings → General → iPhone Storage → CDD Inventory. Android: the About screen in the app."
+      placeholder: "e.g. 0.12.0 (28)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and OS version
+      placeholder: "e.g. iPhone 15, iOS 27.0 / Zebra TC52, Android 13"
+    validations:
+      required: true
+  - type: dropdown
+    id: server
+    attributes:
+      label: CDD Vault server
+      options:
+        - EU (eu.collaborativedrug.com)
+        - US (app.collaborativedrug.com)
+        - Other / custom
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Sync
+        - Checking session / scanning
+        - Search
+        - Sample detail
+        - Move / deplete / events (writes to CDD)
+        - Plates
+        - Vault setup / token
+        - Export (CSV / XLSX)
+        - Other
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you see, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Scan …
+        3. See error …
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Error message or anything else
+      description: Copy the exact error text if one was shown.
